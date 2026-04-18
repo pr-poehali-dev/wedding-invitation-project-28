@@ -120,6 +120,49 @@ export default function Index() {
 
 
 
+      {/* ── ДРЕСС-КОД ── */}
+      <section className="py-24 px-6" style={{ background: "rgba(201,150,106,0.06)" }}>
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="font-montserrat text-xs tracking-[0.35em] uppercase mb-4" style={{ color: "var(--wedding-gold)" }}>
+              дресс-код
+            </p>
+            <h2 className="text-5xl font-light italic" style={{ color: "var(--wedding-dark)" }}>Стиль вечера</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-0 border-t border-b" style={{ borderColor: "rgba(201,150,106,0.3)" }}>
+
+            {/* Девушки */}
+            <div className="py-12 px-10 md:border-r" style={{ borderColor: "rgba(201,150,106,0.3)" }}>
+              <p className="font-montserrat text-xs tracking-[0.3em] uppercase mb-6 text-center" style={{ color: "var(--wedding-muted)" }}>Девушки</p>
+              <div className="flex justify-center gap-3 mb-6">
+                {["#8B0000", "#C0392B", "#E74C3C", "#FF6B6B", "#C9485B"].map((color) => (
+                  <div key={color} className="w-8 h-8 rounded-full border-2" style={{ background: color, borderColor: "rgba(201,150,106,0.3)" }} />
+                ))}
+              </div>
+              <p className="text-center text-xl font-light italic mb-2" style={{ color: "var(--wedding-dark)" }}>Оттенки красного</p>
+              <p className="font-montserrat text-xs text-center leading-relaxed" style={{ color: "var(--wedding-muted)" }}>
+                бордо · алый · малиновый · рубиновый
+              </p>
+            </div>
+
+            {/* Мужчины */}
+            <div className="py-12 px-10">
+              <p className="font-montserrat text-xs tracking-[0.3em] uppercase mb-6 text-center" style={{ color: "var(--wedding-muted)" }}>Мужчины</p>
+              <div className="flex justify-center gap-3 mb-6">
+                {["#1a1a1a", "#3d3d3d", "#f5f5f5", "#ffffff"].map((color) => (
+                  <div key={color} className="w-8 h-8 rounded-full border-2" style={{ background: color, borderColor: "rgba(201,150,106,0.3)" }} />
+                ))}
+              </div>
+              <p className="text-center text-xl font-light italic mb-2" style={{ color: "var(--wedding-dark)" }}>Чёрный и белый</p>
+              <p className="font-montserrat text-xs text-center leading-relaxed" style={{ color: "var(--wedding-muted)" }}>
+                чёрный · графит · белый · молочный
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── ПРОГРАММА ── */}
       <section className="py-28 px-6">
         <div className="max-w-2xl mx-auto">
