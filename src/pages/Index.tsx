@@ -3,6 +3,7 @@ import Icon from "@/components/ui/icon";
 
 const PHOTO = "https://cdn.poehali.dev/projects/8b25d0d8-219a-4f89-a360-9ac0c073bb21/files/ad3af94a-1217-4bcb-9140-a4f2c9182d5b.jpg";
 const PHOTO_OLEG_YULIA = "https://cdn.poehali.dev/projects/8b25d0d8-219a-4f89-a360-9ac0c073bb21/bucket/44471da9-c4bf-4e7c-9c1d-859b17bf4e2c.jpg";
+const PHOTO_IVAN_ANASTASIA = "https://cdn.poehali.dev/projects/8b25d0d8-219a-4f89-a360-9ac0c073bb21/bucket/7a7b03df-a0a3-4482-b331-c6bd83f96041.jpg";
 
 export default function Index() {
   const [form, setForm] = useState({ name: "", guests: "1", attending: "yes", wishes: "" });
@@ -77,6 +78,37 @@ export default function Index() {
             <span className="font-montserrat text-xs tracking-widest uppercase">прокрутите</span>
             <Icon name="ChevronDown" size={16} />
           </div>
+        </div>
+      </section>
+
+      {/* ── ВТОРАЯ ПАРА — ИВАН И АНАСТАСИЯ ── */}
+      <section className="relative flex flex-col md:flex-row overflow-hidden" style={{ minHeight: "60vh" }}>
+
+        {/* Левая часть — имена */}
+        <div className="md:w-1/2 flex flex-col justify-center px-8 md:px-16 py-16 order-2 md:order-1" style={{ background: "var(--wedding-cream)" }}>
+          <p className="font-montserrat tracking-[0.35em] text-xs uppercase mb-8" style={{ color: "var(--wedding-muted)" }}>
+            вторая пара
+          </p>
+          <div className="flex items-center gap-3 mb-6">
+            <h2 className="text-5xl md:text-6xl font-light italic leading-none" style={{ color: "var(--wedding-dark)" }}>Иван</h2>
+            <span className="text-2xl" style={{ color: "var(--wedding-gold)" }}>&</span>
+            <h2 className="text-5xl md:text-6xl font-light italic leading-none" style={{ color: "var(--wedding-dark)" }}>Анастасия</h2>
+          </div>
+          <div className="flex items-center gap-4">
+            <div className="h-px w-8" style={{ background: "var(--wedding-gold)" }} />
+            <p className="font-montserrat tracking-[0.2em] text-sm" style={{ color: "var(--wedding-muted)" }}>26 ИЮЛЯ 2026</p>
+          </div>
+        </div>
+
+        {/* Правая часть — фото */}
+        <div className="md:w-1/2 relative overflow-hidden order-1 md:order-2" style={{ minHeight: "50vh" }}>
+          <img
+            src={PHOTO_IVAN_ANASTASIA}
+            alt="Иван и Анастасия"
+            className="absolute inset-0 w-full h-full object-cover object-top"
+          />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to left, transparent 60%, var(--wedding-cream) 100%)" }} />
+          <div className="absolute inset-0 md:hidden" style={{ background: "linear-gradient(to bottom, transparent 60%, var(--wedding-cream) 100%)" }} />
         </div>
       </section>
 
