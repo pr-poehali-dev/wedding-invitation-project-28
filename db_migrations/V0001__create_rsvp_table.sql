@@ -1,0 +1,8 @@
+CREATE TABLE rsvp (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  attending TEXT NOT NULL,
+  guests INTEGER NOT NULL DEFAULT 1,
+  wishes TEXT,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
