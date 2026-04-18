@@ -24,20 +24,39 @@ export default function Index() {
         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(26,10,14,0.2) 0%, rgba(26,10,14,0.55) 60%, rgba(26,10,14,1) 100%)" }} />
 
         <div className="relative z-10 text-center px-6 flex flex-col items-center">
-          <p className="font-montserrat tracking-[0.35em] text-xs uppercase mb-8 opacity-0 animate-fade-up" style={{ color: "var(--wedding-muted)" }}>
-            приглашение
+          <p className="font-montserrat tracking-[0.35em] text-xs uppercase mb-10 opacity-0 animate-fade-up" style={{ color: "var(--wedding-muted)" }}>
+            двойное торжество
           </p>
-          <h1 className="text-7xl md:text-9xl font-light italic mb-4 opacity-0 animate-fade-up-delay leading-none" style={{ color: "var(--wedding-dark)" }}>
-            Александр
-          </h1>
-          <div className="flex items-center gap-6 mb-4 opacity-0 animate-fade-up-delay">
-            <div className="h-px w-16" style={{ background: "var(--wedding-gold)" }} />
-            <span className="text-2xl" style={{ color: "var(--wedding-gold)" }}>&</span>
-            <div className="h-px w-16" style={{ background: "var(--wedding-gold)" }} />
+
+          {/* Первая пара */}
+          <div className="flex items-center gap-4 md:gap-8 mb-6 opacity-0 animate-fade-up-delay">
+            <h1 className="text-5xl md:text-7xl font-light italic leading-none" style={{ color: "var(--wedding-dark)" }}>Олег</h1>
+            <div className="flex items-center gap-3">
+              <div className="h-px w-8 md:w-12" style={{ background: "var(--wedding-gold)" }} />
+              <span className="text-xl" style={{ color: "var(--wedding-gold)" }}>&</span>
+              <div className="h-px w-8 md:w-12" style={{ background: "var(--wedding-gold)" }} />
+            </div>
+            <h1 className="text-5xl md:text-7xl font-light italic leading-none" style={{ color: "var(--wedding-dark)" }}>Юлия</h1>
           </div>
-          <h1 className="text-7xl md:text-9xl font-light italic mb-12 opacity-0 animate-fade-up-delay leading-none" style={{ color: "var(--wedding-dark)" }}>
-            Мария
-          </h1>
+
+          {/* Разделитель */}
+          <div className="flex items-center gap-4 mb-6 opacity-0 animate-fade-up-delay">
+            <div className="h-px flex-1 max-w-[60px]" style={{ background: "rgba(201,150,106,0.3)" }} />
+            <span className="font-montserrat text-xs tracking-[0.3em] uppercase" style={{ color: "var(--wedding-muted)" }}>и</span>
+            <div className="h-px flex-1 max-w-[60px]" style={{ background: "rgba(201,150,106,0.3)" }} />
+          </div>
+
+          {/* Вторая пара */}
+          <div className="flex items-center gap-4 md:gap-8 mb-12 opacity-0 animate-fade-up-delay2">
+            <h1 className="text-5xl md:text-7xl font-light italic leading-none" style={{ color: "var(--wedding-dark)" }}>Иван</h1>
+            <div className="flex items-center gap-3">
+              <div className="h-px w-8 md:w-12" style={{ background: "var(--wedding-gold)" }} />
+              <span className="text-xl" style={{ color: "var(--wedding-gold)" }}>&</span>
+              <div className="h-px w-8 md:w-12" style={{ background: "var(--wedding-gold)" }} />
+            </div>
+            <h1 className="text-5xl md:text-7xl font-light italic leading-none" style={{ color: "var(--wedding-dark)" }}>Анастасия</h1>
+          </div>
+
           <p className="font-montserrat tracking-[0.2em] text-sm opacity-0 animate-fade-up-delay2" style={{ color: "var(--wedding-muted)" }}>
             14 ИЮНЯ 2025
           </p>
@@ -94,29 +113,64 @@ export default function Index() {
             <h2 className="text-5xl font-light italic" style={{ color: "var(--wedding-dark)" }}>Жених и Невеста</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-16 items-start">
-            <div className="text-center">
-              <div className="w-32 h-32 rounded-full mx-auto mb-8 flex items-center justify-center text-5xl border" style={{ borderColor: "rgba(196,168,130,0.4)", background: "rgba(196,168,130,0.08)" }}>
-                🤵
+          {/* Первая пара */}
+          <div className="mb-16">
+            <p className="text-center font-montserrat text-xs tracking-[0.3em] uppercase mb-10" style={{ color: "var(--wedding-gold)" }}>
+              — первая пара —
+            </p>
+            <div className="grid md:grid-cols-2 gap-16 items-start">
+              <div className="text-center">
+                <div className="w-28 h-28 rounded-full mx-auto mb-6 flex items-center justify-center text-4xl border" style={{ borderColor: "rgba(201,150,106,0.4)", background: "rgba(201,150,106,0.08)" }}>🤵</div>
+                <h3 className="text-3xl font-light italic mb-2" style={{ color: "var(--wedding-dark)" }}>Олег</h3>
+                <p className="font-montserrat text-xs tracking-widest uppercase mb-4" style={{ color: "var(--wedding-gold)" }}>Жених</p>
+                <div className="w-8 h-px mx-auto mb-4" style={{ background: "var(--wedding-gold)" }} />
+                <p className="text-base font-light leading-relaxed" style={{ color: "var(--wedding-muted)" }}>
+                  Надёжный и заботливый, с тёплым взглядом и открытой душой. Мечтает о большой семье и жить у моря.
+                </p>
               </div>
-              <h3 className="text-4xl font-light italic mb-2" style={{ color: "var(--wedding-dark)" }}>Александр</h3>
-              <p className="font-montserrat text-xs tracking-widest uppercase mb-6" style={{ color: "var(--wedding-gold)" }}>Жених</p>
-              <div className="w-8 h-px mx-auto mb-6" style={{ background: "var(--wedding-gold)" }} />
-              <p className="text-lg font-light leading-relaxed" style={{ color: "var(--wedding-muted)" }}>
-                Архитектор по призванию и романтик по натуре. Любит горные путешествия, хорошее кино и готовить завтраки для любимых.
-              </p>
+              <div className="text-center">
+                <div className="w-28 h-28 rounded-full mx-auto mb-6 flex items-center justify-center text-4xl border" style={{ borderColor: "rgba(201,150,106,0.4)", background: "rgba(201,150,106,0.08)" }}>👰</div>
+                <h3 className="text-3xl font-light italic mb-2" style={{ color: "var(--wedding-dark)" }}>Юлия</h3>
+                <p className="font-montserrat text-xs tracking-widest uppercase mb-4" style={{ color: "var(--wedding-gold)" }}>Невеста</p>
+                <div className="w-8 h-px mx-auto mb-4" style={{ background: "var(--wedding-gold)" }} />
+                <p className="text-base font-light leading-relaxed" style={{ color: "var(--wedding-muted)" }}>
+                  Лёгкая на подъём и влюблённая в жизнь. Обожает путешествия, хорошую музыку и искренний смех.
+                </p>
+              </div>
             </div>
+          </div>
 
-            <div className="text-center">
-              <div className="w-32 h-32 rounded-full mx-auto mb-8 flex items-center justify-center text-5xl border" style={{ borderColor: "rgba(196,168,130,0.4)", background: "rgba(196,168,130,0.08)" }}>
-                👰
+          {/* Разделитель */}
+          <div className="flex items-center gap-6 mb-16">
+            <div className="h-px flex-1" style={{ background: "rgba(201,150,106,0.2)" }} />
+            <span className="text-2xl" style={{ color: "rgba(201,150,106,0.4)" }}>✦</span>
+            <div className="h-px flex-1" style={{ background: "rgba(201,150,106,0.2)" }} />
+          </div>
+
+          {/* Вторая пара */}
+          <div>
+            <p className="text-center font-montserrat text-xs tracking-[0.3em] uppercase mb-10" style={{ color: "var(--wedding-gold)" }}>
+              — вторая пара —
+            </p>
+            <div className="grid md:grid-cols-2 gap-16 items-start">
+              <div className="text-center">
+                <div className="w-28 h-28 rounded-full mx-auto mb-6 flex items-center justify-center text-4xl border" style={{ borderColor: "rgba(201,150,106,0.4)", background: "rgba(201,150,106,0.08)" }}>🤵</div>
+                <h3 className="text-3xl font-light italic mb-2" style={{ color: "var(--wedding-dark)" }}>Иван</h3>
+                <p className="font-montserrat text-xs tracking-widest uppercase mb-4" style={{ color: "var(--wedding-gold)" }}>Жених</p>
+                <div className="w-8 h-px mx-auto mb-4" style={{ background: "var(--wedding-gold)" }} />
+                <p className="text-base font-light leading-relaxed" style={{ color: "var(--wedding-muted)" }}>
+                  Спокойный и мудрый, любит природу и простые радости. Говорит мало, но всегда по делу.
+                </p>
               </div>
-              <h3 className="text-4xl font-light italic mb-2" style={{ color: "var(--wedding-dark)" }}>Мария</h3>
-              <p className="font-montserrat text-xs tracking-widest uppercase mb-6" style={{ color: "var(--wedding-gold)" }}>Невеста</p>
-              <div className="w-8 h-px mx-auto mb-6" style={{ background: "var(--wedding-gold)" }} />
-              <p className="text-lg font-light leading-relaxed" style={{ color: "var(--wedding-muted)" }}>
-                Художник с душой поэта. Обожает цветы, старые книги и долгие прогулки. Мечтала о такой свадьбе с самого детства.
-              </p>
+              <div className="text-center">
+                <div className="w-28 h-28 rounded-full mx-auto mb-6 flex items-center justify-center text-4xl border" style={{ borderColor: "rgba(201,150,106,0.4)", background: "rgba(201,150,106,0.08)" }}>👰</div>
+                <h3 className="text-3xl font-light italic mb-2" style={{ color: "var(--wedding-dark)" }}>Анастасия</h3>
+                <p className="font-montserrat text-xs tracking-widest uppercase mb-4" style={{ color: "var(--wedding-gold)" }}>Невеста</p>
+                <div className="w-8 h-px mx-auto mb-4" style={{ background: "var(--wedding-gold)" }} />
+                <p className="text-base font-light leading-relaxed" style={{ color: "var(--wedding-muted)" }}>
+                  Энергичная и творческая. Превращает любой день в праздник — просто своим присутствием.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -273,8 +327,12 @@ export default function Index() {
 
       {/* ── FOOTER ── */}
       <footer className="py-16 text-center px-6" style={{ borderTop: "1px solid rgba(196,168,130,0.2)" }}>
+        <p className="text-3xl font-light italic mb-1" style={{ color: "var(--wedding-dark)" }}>
+          Олег & Юлия
+        </p>
+        <p className="font-montserrat text-xs tracking-widest mb-3" style={{ color: "rgba(201,150,106,0.5)" }}>и</p>
         <p className="text-3xl font-light italic mb-3" style={{ color: "var(--wedding-dark)" }}>
-          Александр & Мария
+          Иван & Анастасия
         </p>
         <p className="font-montserrat text-xs tracking-widest" style={{ color: "var(--wedding-muted)" }}>
           14 · 06 · 2025
