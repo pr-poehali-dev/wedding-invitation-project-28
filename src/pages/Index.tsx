@@ -145,78 +145,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* ── О НАС ── */}
-      <section className="py-20 px-6" style={{ background: "rgba(196,168,130,0.07)" }}>
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-20">
-            <p className="font-montserrat text-xs tracking-[0.35em] uppercase mb-4" style={{ color: "var(--wedding-gold)" }}>
-              история
-            </p>
-            <h2 className="text-5xl font-light italic" style={{ color: "var(--wedding-dark)" }}>Жених и Невеста</h2>
-          </div>
 
-          {/* Первая пара */}
-          <div className="mb-16">
-            <p className="text-center font-montserrat text-xs tracking-[0.3em] uppercase mb-10" style={{ color: "var(--wedding-gold)" }}>
-              — первая пара —
-            </p>
-            <div className="grid md:grid-cols-2 gap-16 items-start">
-              <div className="text-center">
-                <div className="w-28 h-28 rounded-full mx-auto mb-6 flex items-center justify-center text-4xl border" style={{ borderColor: "rgba(201,150,106,0.4)", background: "rgba(201,150,106,0.08)" }}>🤵</div>
-                <h3 className="text-3xl font-light italic mb-2" style={{ color: "var(--wedding-dark)" }}>Олег</h3>
-                <p className="font-montserrat text-xs tracking-widest uppercase mb-4" style={{ color: "var(--wedding-gold)" }}>Жених</p>
-                <div className="w-8 h-px mx-auto mb-4" style={{ background: "var(--wedding-gold)" }} />
-                <p className="text-base font-light leading-relaxed" style={{ color: "var(--wedding-muted)" }}>
-                  Надёжный и заботливый, с тёплым взглядом и открытой душой. Мечтает о большой семье и жить у моря.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-28 h-28 rounded-full mx-auto mb-6 flex items-center justify-center text-4xl border" style={{ borderColor: "rgba(201,150,106,0.4)", background: "rgba(201,150,106,0.08)" }}>👰</div>
-                <h3 className="text-3xl font-light italic mb-2" style={{ color: "var(--wedding-dark)" }}>Юлия</h3>
-                <p className="font-montserrat text-xs tracking-widest uppercase mb-4" style={{ color: "var(--wedding-gold)" }}>Невеста</p>
-                <div className="w-8 h-px mx-auto mb-4" style={{ background: "var(--wedding-gold)" }} />
-                <p className="text-base font-light leading-relaxed" style={{ color: "var(--wedding-muted)" }}>
-                  Лёгкая на подъём и влюблённая в жизнь. Обожает путешествия, хорошую музыку и искренний смех.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Разделитель */}
-          <div className="flex items-center gap-6 mb-16">
-            <div className="h-px flex-1" style={{ background: "rgba(201,150,106,0.2)" }} />
-            <span className="text-2xl" style={{ color: "rgba(201,150,106,0.4)" }}>✦</span>
-            <div className="h-px flex-1" style={{ background: "rgba(201,150,106,0.2)" }} />
-          </div>
-
-          {/* Вторая пара */}
-          <div>
-            <p className="text-center font-montserrat text-xs tracking-[0.3em] uppercase mb-10" style={{ color: "var(--wedding-gold)" }}>
-              — вторая пара —
-            </p>
-            <div className="grid md:grid-cols-2 gap-16 items-start">
-              <div className="text-center">
-                <div className="w-28 h-28 rounded-full mx-auto mb-6 flex items-center justify-center text-4xl border" style={{ borderColor: "rgba(201,150,106,0.4)", background: "rgba(201,150,106,0.08)" }}>🤵</div>
-                <h3 className="text-3xl font-light italic mb-2" style={{ color: "var(--wedding-dark)" }}>Иван</h3>
-                <p className="font-montserrat text-xs tracking-widest uppercase mb-4" style={{ color: "var(--wedding-gold)" }}>Жених</p>
-                <div className="w-8 h-px mx-auto mb-4" style={{ background: "var(--wedding-gold)" }} />
-                <p className="text-base font-light leading-relaxed" style={{ color: "var(--wedding-muted)" }}>
-                  Спокойный и мудрый, любит природу и простые радости. Говорит мало, но всегда по делу.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-28 h-28 rounded-full mx-auto mb-6 flex items-center justify-center text-4xl border" style={{ borderColor: "rgba(201,150,106,0.4)", background: "rgba(201,150,106,0.08)" }}>👰</div>
-                <h3 className="text-3xl font-light italic mb-2" style={{ color: "var(--wedding-dark)" }}>Анастасия</h3>
-                <p className="font-montserrat text-xs tracking-widest uppercase mb-4" style={{ color: "var(--wedding-gold)" }}>Невеста</p>
-                <div className="w-8 h-px mx-auto mb-4" style={{ background: "var(--wedding-gold)" }} />
-                <p className="text-base font-light leading-relaxed" style={{ color: "var(--wedding-muted)" }}>
-                  Энергичная и творческая. Превращает любой день в праздник — просто своим присутствием.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ── ПРОГРАММА ── */}
       <section className="py-28 px-6">
