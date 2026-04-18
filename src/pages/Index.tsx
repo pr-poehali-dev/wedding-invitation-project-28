@@ -2,6 +2,7 @@ import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
 const PHOTO = "https://cdn.poehali.dev/projects/8b25d0d8-219a-4f89-a360-9ac0c073bb21/files/ad3af94a-1217-4bcb-9140-a4f2c9182d5b.jpg";
+const PHOTO_OLEG_YULIA = "https://cdn.poehali.dev/projects/8b25d0d8-219a-4f89-a360-9ac0c073bb21/bucket/44471da9-c4bf-4e7c-9c1d-859b17bf4e2c.jpg";
 
 export default function Index() {
   const [form, setForm] = useState({ name: "", guests: "1", attending: "yes", wishes: "" });
@@ -16,53 +17,62 @@ export default function Index() {
     <div className="min-h-screen font-cormorant" style={{ background: "var(--wedding-cream)" }}>
 
       {/* ── HERO ── */}
-      <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${PHOTO})` }}
-        />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(26,10,14,0.2) 0%, rgba(26,10,14,0.55) 60%, rgba(26,10,14,1) 100%)" }} />
+      <section className="relative min-h-screen flex flex-col overflow-hidden">
+        {/* Фоновый градиент */}
+        <div className="absolute inset-0" style={{ background: "var(--wedding-cream)" }} />
 
-        <div className="relative z-10 text-center px-6 flex flex-col items-center">
-          <p className="font-montserrat tracking-[0.35em] text-xs uppercase mb-10 opacity-0 animate-fade-up" style={{ color: "var(--wedding-muted)" }}>
-            двойное торжество
-          </p>
+        <div className="relative z-10 flex flex-col md:flex-row min-h-screen">
 
-          {/* Первая пара */}
-          <div className="flex items-center gap-4 md:gap-8 mb-6 opacity-0 animate-fade-up-delay">
-            <h1 className="text-5xl md:text-7xl font-light italic leading-none" style={{ color: "var(--wedding-dark)" }}>Олег</h1>
-            <div className="flex items-center gap-3">
-              <div className="h-px w-8 md:w-12" style={{ background: "var(--wedding-gold)" }} />
-              <span className="text-xl" style={{ color: "var(--wedding-gold)" }}>&</span>
-              <div className="h-px w-8 md:w-12" style={{ background: "var(--wedding-gold)" }} />
+          {/* Левая часть — фото Олега и Юлии */}
+          <div className="md:w-1/2 relative overflow-hidden" style={{ minHeight: "50vh" }}>
+            <img
+              src={PHOTO_OLEG_YULIA}
+              alt="Олег и Юлия"
+              className="absolute inset-0 w-full h-full object-cover object-top"
+            />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to right, transparent 60%, var(--wedding-cream) 100%)" }} />
+            <div className="absolute inset-0 md:hidden" style={{ background: "linear-gradient(to bottom, transparent 60%, var(--wedding-cream) 100%)" }} />
+          </div>
+
+          {/* Правая часть — текст */}
+          <div className="md:w-1/2 flex flex-col justify-center px-8 md:px-16 py-16 md:py-0">
+            <p className="font-montserrat tracking-[0.35em] text-xs uppercase mb-10 opacity-0 animate-fade-up" style={{ color: "var(--wedding-muted)" }}>
+              двойное торжество
+            </p>
+
+            {/* Первая пара */}
+            <div className="mb-4 opacity-0 animate-fade-up-delay">
+              <div className="flex items-center gap-3 mb-1">
+                <h1 className="text-5xl md:text-6xl font-light italic leading-none" style={{ color: "var(--wedding-dark)" }}>Олег</h1>
+                <span className="text-2xl" style={{ color: "var(--wedding-gold)" }}>&</span>
+                <h1 className="text-5xl md:text-6xl font-light italic leading-none" style={{ color: "var(--wedding-dark)" }}>Юлия</h1>
+              </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-light italic leading-none" style={{ color: "var(--wedding-dark)" }}>Юлия</h1>
-          </div>
 
-          {/* Разделитель */}
-          <div className="flex items-center gap-4 mb-6 opacity-0 animate-fade-up-delay">
-            <div className="h-px flex-1 max-w-[60px]" style={{ background: "rgba(201,150,106,0.3)" }} />
-            <span className="font-montserrat text-xs tracking-[0.3em] uppercase" style={{ color: "var(--wedding-muted)" }}>и</span>
-            <div className="h-px flex-1 max-w-[60px]" style={{ background: "rgba(201,150,106,0.3)" }} />
-          </div>
-
-          {/* Вторая пара */}
-          <div className="flex items-center gap-4 md:gap-8 mb-12 opacity-0 animate-fade-up-delay2">
-            <h1 className="text-5xl md:text-7xl font-light italic leading-none" style={{ color: "var(--wedding-dark)" }}>Иван</h1>
-            <div className="flex items-center gap-3">
-              <div className="h-px w-8 md:w-12" style={{ background: "var(--wedding-gold)" }} />
-              <span className="text-xl" style={{ color: "var(--wedding-gold)" }}>&</span>
-              <div className="h-px w-8 md:w-12" style={{ background: "var(--wedding-gold)" }} />
+            {/* Разделитель */}
+            <div className="flex items-center gap-4 mb-4 opacity-0 animate-fade-up-delay">
+              <div className="h-px w-10" style={{ background: "rgba(201,150,106,0.4)" }} />
+              <span className="font-montserrat text-xs tracking-[0.3em] uppercase" style={{ color: "var(--wedding-muted)" }}>и</span>
+              <div className="h-px w-10" style={{ background: "rgba(201,150,106,0.4)" }} />
             </div>
-            <h1 className="text-5xl md:text-7xl font-light italic leading-none" style={{ color: "var(--wedding-dark)" }}>Анастасия</h1>
-          </div>
 
-          <p className="font-montserrat tracking-[0.2em] text-sm opacity-0 animate-fade-up-delay2" style={{ color: "var(--wedding-muted)" }}>
-            26 ИЮЛЯ 2026
-          </p>
+            {/* Вторая пара */}
+            <div className="mb-10 opacity-0 animate-fade-up-delay2">
+              <div className="flex items-center gap-3">
+                <h1 className="text-5xl md:text-6xl font-light italic leading-none" style={{ color: "var(--wedding-dark)" }}>Иван</h1>
+                <span className="text-2xl" style={{ color: "var(--wedding-gold)" }}>&</span>
+                <h1 className="text-5xl md:text-6xl font-light italic leading-none" style={{ color: "var(--wedding-dark)" }}>Анастасия</h1>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4 mb-6 opacity-0 animate-fade-up-delay2">
+              <div className="h-px w-8" style={{ background: "var(--wedding-gold)" }} />
+              <p className="font-montserrat tracking-[0.2em] text-sm" style={{ color: "var(--wedding-muted)" }}>26 ИЮЛЯ 2026</p>
+            </div>
+          </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-up-delay3">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-up-delay3 z-20">
           <div className="flex flex-col items-center gap-2" style={{ color: "var(--wedding-muted)" }}>
             <span className="font-montserrat text-xs tracking-widest uppercase">прокрутите</span>
             <Icon name="ChevronDown" size={16} />
