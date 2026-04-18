@@ -83,8 +83,8 @@ export default function Index() {
           <div className="grid md:grid-cols-3 gap-0 border-t border-b" style={{ borderColor: "rgba(196,168,130,0.3)" }}>
             {[
               { icon: "Calendar", label: "Дата", value: "26 июля 2026", sub: "воскресенье" },
-              { icon: "Clock", label: "Время", value: "17:00", sub: "начало регистрации" },
-              { icon: "MapPin", label: "Место", value: "Усадьба «Берёзовая»", sub: "ул. Садовая, 12" },
+              { icon: "Clock", label: "Время", value: "12:30", sub: "начало регистрации" },
+              { icon: "MapPin", label: "Место", value: "ЗАГС", sub: "с. Быстрый Исток, ул. Советская, 3" },
             ].map((item, i) => (
               <div
                 key={i}
@@ -190,8 +190,8 @@ export default function Index() {
             <div className="absolute left-[105px] top-0 bottom-0 w-px" style={{ background: "rgba(196,168,130,0.3)" }} />
 
             {[
-              { time: "16:30", title: "Сбор гостей", desc: "Добро пожаловать в усадьбу, фуршет и приветственные напитки" },
-              { time: "17:00", title: "Церемония", desc: "Торжественная регистрация брака в цветочном зале" },
+              { time: "12:00", title: "Сбор гостей", desc: "Добро пожаловать в ЗАГС, с. Быстрый Исток, ул. Советская, 3" },
+              { time: "12:30", title: "Церемония", desc: "Торжественная регистрация брака" },
               { time: "18:00", title: "Фотосессия", desc: "Прогулка по парку усадьбы, памятные фотографии" },
               { time: "19:00", title: "Банкет", desc: "Праздничный ужин, тосты и танцы до рассвета" },
               { time: "22:00", title: "Торт", desc: "Торжественная церемония разрезания свадебного торта" },
