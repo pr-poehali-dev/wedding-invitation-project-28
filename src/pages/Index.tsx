@@ -21,7 +21,7 @@ export default function Index() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${PHOTO})` }}
         />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(249,245,239,0.2) 0%, rgba(249,245,239,0.5) 60%, rgba(249,245,239,1) 100%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(26,10,14,0.2) 0%, rgba(26,10,14,0.55) 60%, rgba(26,10,14,1) 100%)" }} />
 
         <div className="relative z-10 text-center px-6 flex flex-col items-center">
           <p className="font-montserrat tracking-[0.35em] text-xs uppercase mb-8 opacity-0 animate-fade-up" style={{ color: "var(--wedding-muted)" }}>
@@ -235,7 +235,7 @@ export default function Index() {
                     style={{ borderColor: "rgba(196,168,130,0.4)", color: "var(--wedding-dark)" }}
                   >
                     {["1", "2", "3", "4"].map(n => (
-                      <option key={n} value={n} style={{ background: "#f9f5ef" }}>
+                      <option key={n} value={n} style={{ background: "#1a0a0e" }}>
                         {n === "1" ? "Только я" : `${n} человека`}
                       </option>
                     ))}
