@@ -4,8 +4,12 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 40 30% 97%;
+    --foreground: 30 15% 20%;
+    --wedding-cream: #f9f5ef;
+    --wedding-gold: #c4a882;
+    --wedding-dark: #2c2420;
+    --wedding-muted: #9c8878;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
