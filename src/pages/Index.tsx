@@ -58,7 +58,7 @@ export default function Index() {
           </div>
 
           <p className="font-montserrat tracking-[0.2em] text-sm opacity-0 animate-fade-up-delay2" style={{ color: "var(--wedding-muted)" }}>
-            14 ИЮНЯ 2025
+            26 ИЮЛЯ 2026
           </p>
         </div>
 
@@ -82,7 +82,7 @@ export default function Index() {
 
           <div className="grid md:grid-cols-3 gap-0 border-t border-b" style={{ borderColor: "rgba(196,168,130,0.3)" }}>
             {[
-              { icon: "Calendar", label: "Дата", value: "14 июня 2025", sub: "суббота" },
+              { icon: "Calendar", label: "Дата", value: "26 июля 2026", sub: "воскресенье" },
               { icon: "Clock", label: "Время", value: "17:00", sub: "начало регистрации" },
               { icon: "MapPin", label: "Место", value: "Усадьба «Берёзовая»", sub: "ул. Садовая, 12" },
             ].map((item, i) => (
@@ -225,7 +225,7 @@ export default function Index() {
             </p>
             <h2 className="text-5xl font-light italic mb-4" style={{ color: "var(--wedding-dark)" }}>Подтверждение</h2>
             <p className="font-montserrat text-xs leading-relaxed" style={{ color: "var(--wedding-muted)" }}>
-              Пожалуйста, подтвердите своё присутствие до 1 июня 2025 года
+              Пожалуйста, подтвердите своё присутствие до 1 июля 2026 года
             </p>
           </div>
 
@@ -335,7 +335,7 @@ export default function Index() {
           Иван & Анастасия
         </p>
         <p className="font-montserrat text-xs tracking-widest" style={{ color: "var(--wedding-muted)" }}>
-          14 · 06 · 2025
+          26 · 07 · 2026
         </p>
       </footer>
     </div>
