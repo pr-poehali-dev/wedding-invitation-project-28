@@ -8,10 +8,26 @@ const PHOTO_IVAN_ANASTASIA = "https://cdn.poehali.dev/projects/8b25d0d8-219a-4f8
 export default function Index() {
   const [form, setForm] = useState({ name: "", guests: "1", attending: "yes", wishes: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+    try {
+      const res = await fetch("https://functions.poehali.dev/dfad3cce-9393-4475-9e9f-952dfd29b96d", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error();
+      setSubmitted(true);
+    } catch {
+      setError("Не удалось отправить. Попробуйте ещё раз.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -298,13 +314,18 @@ export default function Index() {
                 />
               </div>
 
+              {error && (
+                <p className="font-montserrat text-xs text-center" style={{ color: "#C0392B" }}>{error}</p>
+              )}
+
               <div className="pt-4">
                 <button
                   type="submit"
-                  className="w-full py-4 border font-montserrat text-xs tracking-[0.3em] uppercase transition-all duration-300 hover:opacity-60"
+                  disabled={loading}
+                  className="w-full py-4 border font-montserrat text-xs tracking-[0.3em] uppercase transition-all duration-300 hover:opacity-60 disabled:opacity-40"
                   style={{ borderColor: "var(--wedding-dark)", color: "var(--wedding-dark)", background: "transparent" }}
                 >
-                  Подтвердить присутствие
+                  {loading ? "Отправляем..." : "Подтвердить присутствие"}
                 </button>
               </div>
             </form>
